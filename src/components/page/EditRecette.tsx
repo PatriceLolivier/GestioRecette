@@ -9,6 +9,7 @@ import { useUpdateRecette } from "@hooks/Recettes/mutation";
 import { Button } from "@atomes/Button";
 import { useEffect } from "react";
 import { useGoTo } from "@lib/utils";
+import { Loading } from "@atomes/Loading";
 
 export const EditRecette = () => {
   const { id } = useParams();const { data: recetteDetails, isLoading, isError } = useRecetteDetails(id);
@@ -22,7 +23,7 @@ export const EditRecette = () => {
     }
   }, [recetteDetails, setCurrentRecette]);
 
-  if (isLoading) return <div>Chargement...</div>;
+  if (isLoading) return <Loading isLoading={isLoading} />;
   if (isError) return <div>Erreur lors du chargement de la recette</div>;
   if (!currentRecette) return <div>Recette non trouvée</div>;
 

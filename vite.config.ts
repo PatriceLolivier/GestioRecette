@@ -9,4 +9,5 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
+  base: '/GestioRecette/',
 })

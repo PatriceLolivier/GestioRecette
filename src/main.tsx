@@ -17,7 +17,7 @@ import "./index.css";
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/GestioRecette">
     <StrictMode>
       <QueryClientProvider client={queryClient}>
         <Routes>

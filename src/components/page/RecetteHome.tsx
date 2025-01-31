@@ -1,6 +1,7 @@
 import { RecetteList } from "@organisme/RecetteList";
 import { useRecettes } from "@hooks/Recettes/queries";
 import { useRecettesStore } from "@store/Recettes";
+import { Loading } from "@atomes/Loading";
 
 export const RecetteHome = () => {
   const { data: recettes, isLoading, error } = useRecettes();
@@ -12,7 +13,7 @@ export const RecetteHome = () => {
 
   console.log('recettes :', recettes);
 
-  if (isLoading) return <div>Chargement...</div>;
+  if (isLoading) return <Loading isLoading={isLoading} />;
   
   if (error) {
     console.log("error :", error);

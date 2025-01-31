@@ -4,12 +4,13 @@ import { GridContainer } from "@organisme/GridContainer";
 import { RecetteMainInfo } from "@organisme/RecetteMainInfo";
 import { RecetteIngredients } from "@organisme/RecetteIngredients";
 import { StepsDetails } from "@organisme/RecetteStepper/RecetteStepper";
+import { Loading } from "@atomes/Loading";
 
 export const RecetteDetails = () => {
     const { id } = useParams();
     const { data: recetteDetails, isLoading, isError, error } = useRecetteDetails(id);
 
-    if (isLoading) return <div>Chargement...</div>;
+    if (isLoading) return <Loading isLoading={isLoading} />;
     if (isError) return <div>Erreur: {error?.message}</div>;
     if (!recetteDetails) return <div>Aucune recette trouvée</div>;
 
