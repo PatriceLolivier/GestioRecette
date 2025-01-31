@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "homepage": "https://PatriceLolivier.github.io/GestioRecette",
+  "homepage": "https://PatriceLolivier.github.io/GestioRecette/",
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
     "@supabase/supabase-js": "^2.48.1",
