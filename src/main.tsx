@@ -23,11 +23,11 @@ createRoot(document.getElementById("root")!).render(
         <Routes>
           
           <Route element={<MainLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/recette" element={<RecetteHome />} />
-            <Route path="/recette/:id" element={<RecetteDetails />} />
-            <Route path="/add-recette" element={<CreateRecette />} />
-            <Route path="/edit-recette/:id" element={<EditRecette />} />
+            <Route path="/GestioRecette" element={<HomePage />} />
+            <Route path="/GestioRecette/recette" element={<RecetteHome />} />
+            <Route path="/GestioRecette/recette/:id" element={<RecetteDetails />} />
+            <Route path="/GestioRecette/add-recette" element={<CreateRecette />} />
+            <Route path="/GestioRecette/edit-recette/:id" element={<EditRecette />} />
           </Route>
         </Routes>
       </QueryClientProvider>
